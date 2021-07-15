@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - RGB-to-Hex-slider</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="content" class="container col-lg-12">
+  <div id="calculator" class="centerBlock">
+    <h1>RGB to Hex Color Converter</h1>
+
+    <div id="questions" class="row">
+      <p class="col d-flex justify-content-center">請輸入0~255之間的數字或拖動卷軸</p>
+      <div class="inputGroup col-12 col-sm-12 col-lg-12 justify-content-center d-flex flex-nowrap">
+        <span class="inputGroup col-1 red">R</span>
+        <input id="redInput" type="number" min="0" max="255" step="1" class="form-control form-control-lg col-6" value="50">
+      </div>
+      <div class="inputGroup col-12 col-sm-12 col-lg-12 justify-content-center d-flex flex-nowrap">
+        <span class="inputGroup col-1 green">G</span>
+        <input id="greenInput" type="number" min="0" max="255" step="1" class="form-control form-control-lg col-6" value="50">
+      </div>
+      <div class="inputGroup col-12 col-sm-12 col-lg-12 justify-content-center d-flex flex-nowrap">
+        <span class="inputGroup col-1 blue">B</span>
+        <input id="blueInput" type="number" min="0" max="255" step="1" class="form-control form-control-lg col-6" value="50">
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 col-lg-12 justify-content-center d-flex flex-nowrap">
+      <button class="btn" id="convertBTN">Convert</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="slider col-12 col-sm-12 col-lg-12 justify-content-center d-flex flex-nowrap">
+      <span class="inputGroup col-1 red">R</span>
+      <input id="redSlider" class="sliderInput sliderRed" type="range" min="0" max="255" step="1" value="50">
+    </div>
+    <div class="slider col-12 col-sm-12 col-lg-12 justify-content-center d-flex flex-nowrap">
+      <span class="inputGroup col-1 green">G</span>
+      <input id="greenSlider" class="sliderInput sliderGreen" type="range" min="0" max="255" step="1" value="50">
+    </div>
+    <div class="slider col-12 col-sm-12 col-lg-12 justify-content-center d-flex flex-nowrap">
+      <span class="inputGroup col-1 blue">B</span>
+      <input id="blueSlider" class="sliderInput sliderBlue" type="range" min="0" max="255" step="1" value="50">
+    </div>
+
+  </div>
+</div>
+
+<div id="swatch" class="centerBlock"></div>
+<div id="results" class="centerBlock">
+  <h3>Your Hex Number: <div id="yourHexNumber"></div>
+  </h3>
+</div>
+</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
